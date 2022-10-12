@@ -34,7 +34,9 @@
             pos_hint: {'center_x': 0.5, 'center_y': 0.52}
 
         MDTextField:
+            id: 'login'
             hint_text: "E-mail: "
+            write_tab: False
             helper_text: "user@email.com"
             mode: "rectangle"
             pos_hint: {'center_x': 0.5, 'center_y': 0.45}
@@ -43,9 +45,11 @@
             icon_left_color: app.theme_cls.primary_color
 
         MDTextField:
+            id: 'password'
             hint_text: "Senha: "
             helper_text: "Sua senha"
             mode: "rectangle"
+            write_tab: False
             password: True
             pos_hint: {'center_x': 0.5, 'center_y': 0.36}
             size_hint_x: 0.8
@@ -58,11 +62,13 @@
             pos_hint: {'center_x': 0.5, 'center_y': 0.3}
 
         MDRaisedButton:
+            id: 'enter'
             text: "Entrar"
             font_size: 18
             elevation: 8
             pos_hint: {'center_x': 0.5, 'center_y': 0.25}
             size_hint_x: 0.8
+            on_press: root.ValidationLogin()
 
         MDRectangleFlatIconButton:
             text: "Facebook"

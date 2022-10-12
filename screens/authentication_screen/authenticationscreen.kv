@@ -1,0 +1,28 @@
+<AuthenticationScreen>
+    name: 'authentication'
+
+    FloatLayout:
+        MDCard:
+            md_bg_color: 0.98, 0.96, 1.00
+
+        MDTopAppBar:
+            md_bg_color: 1, 1, 1, 0
+            title: "Autenticado!"
+            elevation: 10 # COLOCA UMA LEVE SOMBRA A BAIXO DA BARRA
+            pos_hint: {'top': 1} # POSICIONAMENTO DESSE ELEMENTO NO TOP
+#            on_press: root.manager.current = 'login'
+            left_action_items: [["arrow-left", lambda x: root.callback()]]
+
+        Image:
+            source: 'images/devops-img.png'
+            size_hint: (0.55, 0.55)
+            pos_hint: {'center_x': 0.5, 'center_y': 0.60}
+
+        MDLabel:
+            text: 'PARABÉNS!!! VOCÊ FOI AUTENTICADO COM SUCESSO!'
+            bold: True
+            theme_text_color: "Custom"
+            text_color: 0.61, 0.15, 0.69
+            font_style: 'H5'
+            halign: 'center'
+            pos_hint: {'center_x': 0.5, 'center_y': 0.34}

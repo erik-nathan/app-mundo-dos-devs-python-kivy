@@ -13,7 +13,9 @@ class LiveApp(MDApp, App):
         os.path.join(os.getcwd(), "screens/screenmanager.kv"),
         os.path.join(os.getcwd(), "screens/login_screen/loginscreen.kv"),
         os.path.join(os.getcwd(), "screens/menu_screen/menuscreen.kv"),
-        os.path.join(os.getcwd(), "screens/registration_screen/registrationscreen.kv")
+        os.path.join(os.getcwd(), "screens/registration_screen/registrationscreen.kv"),
+        os.path.join(os.getcwd(), "screens/authentication_screen/authenticationscreen.kv")
+
     }
 
     # class to watch from *.py files
@@ -21,7 +23,8 @@ class LiveApp(MDApp, App):
         "MainScreenManager": "screens.screenmanager",
         "MenuScreen": "screens.menu_screen.menuscreen",
         "LoginScreen": "screens.login_screen.loginscreen",
-        "RegistrationScreen": "screens.registration_screen.registrationscreen"
+        "RegistrationScreen": "screens.registration_screen.registrationscreen",
+        "AuthenticationScreen": "screens.authentication_screen.authenticationscreen"
     }
 
     # auto reload path
