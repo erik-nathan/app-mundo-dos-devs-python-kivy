@@ -1,0 +1,48 @@
+<MenuScreen>
+    name: "menu"
+
+    MDCard:
+        md_bg_color: 0.98, 0.96, 1.00
+
+    Image:
+        source: 'images/img-menu.png'
+        size_hint: (0.65, 0.65)
+        pos_hint: {'center_x': 0.5, 'center_y': 0.72}
+
+    MDLabel:
+        text: 'MUNDO DOS DEVS!'
+        bold: True
+        theme_text_color: "Custom"
+        text_color: 0.61, 0.15, 0.69
+        font_style: 'H5'
+        halign: 'center'
+        pos_hint: {'center_x': 0.5, 'center_y': 0.52}
+
+    MDLabel:
+        text: "Aqui é o mundo dos Devs. A onde você fica por dentro de tudo que acontece na área de TI, como programação tanto para Front-end como Back-end! Aqui você encontra uma comunidade com vários Devs para poder tirar suas dúvidas e ajudar uns aos outros!"
+        halign: "center"
+        font_size: 18
+        pos_hint: {'center_x': 0.5, 'center_y': 0.4}
+        size_hint_x: 0.8
+
+    MDTopAppBar:
+        md_bg_color: 1, 1, 1, 0
+        title: "Mundo dos Devs"
+        elevation: 10 # COLOCA UMA LEVE SOMBRA A BAIXO DA BARRA
+        pos_hint: {'top': 1} # POSICIONAMENTO DESSE ELEMENTO NO TOP
+
+    MDRaisedButton:
+        text: "Fazer Login"
+        pos_hint: {'center_x': 0.5, 'center_y': 0.16}
+        size_hint_x: 0.75
+        elevation: 8
+        font_size: 18
+        on_press: root.manager.current = 'login'
+
+    MDRaisedButton:
+        text: "Criar Conta"
+        pos_hint: {'center_x': 0.5, 'center_y': 0.1}
+        size_hint_x: 0.75
+        elevation: 8
+        font_size: 18
+        on_press: root.manager.current = 'cadastro'

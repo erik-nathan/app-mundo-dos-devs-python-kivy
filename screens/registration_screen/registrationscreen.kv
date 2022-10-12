@@ -1,0 +1,106 @@
+<RegistrationScreen>
+    name: 'cadastro'
+
+    FloatLayout:
+        MDCard:
+            md_bg_color: 0.98, 0.96, 1.00
+
+        MDTopAppBar:
+            md_bg_color: 1, 1, 1, 0
+            title: "Cadastro"
+            elevation: 10 # COLOCA UMA LEVE SOMBRA A BAIXO DA BARRA
+            pos_hint: {'top': 1} # POSICIONAMENTO DESSE ELEMENTO NO TOP
+            left_action_items: [["arrow-left", lambda x: root.callback()]]
+
+        Image:
+            source: 'images/devops-img.png'
+            size_hint: (0.40, 0.40)
+            pos_hint: {'center_x': 0.5, 'center_y': 0.77}
+
+        MDLabel:
+            text: 'Realizar Cadastro'
+            bold: True
+            theme_text_color: "Custom"
+            text_color: 0.61, 0.15, 0.69
+            font_style: 'H6'
+            halign: 'center'
+            pos_hint: {'center_x': 0.5, 'center_y': 0.64}
+
+        MDLabel:
+            text: 'Preencha os campos abaixo!'
+            font_style: 'Caption'
+            halign: 'center'
+            pos_hint: {'center_x': 0.5, 'center_y': 0.61}
+
+        MDTextField:
+            hint_text: "Nome: "
+            helper_text: "Seu Nome"
+            mode: "rectangle"
+            pos_hint: {'center_x': 0.5, 'center_y': 0.55}
+            size_hint_x: 0.8
+            icon_left: 'account'
+            icon_left_color: app.theme_cls.primary_color
+
+        MDTextField:
+            hint_text: "E-mail: "
+            helper_text: "user@email.com"
+            mode: "rectangle"
+            pos_hint: {'center_x': 0.5, 'center_y': 0.46}
+            size_hint_x: 0.8
+            icon_left: 'email'
+            icon_left_color: app.theme_cls.primary_color
+
+        MDTextField:
+            hint_text: "Senha: "
+            helper_text: "Sua senha"
+            mode: "rectangle"
+            password: True
+            pos_hint: {'center_x': 0.5, 'center_y': 0.37}
+            size_hint_x: 0.8
+            icon_left: "key-variant"
+            icon_right_color: app.theme_cls.primary_color
+
+        MDTextField:
+            hint_text: "Confirme a Senha: "
+            helper_text: "Confirme sua senha"
+            mode: "rectangle"
+            password: True
+            pos_hint: {'center_x': 0.5, 'center_y': 0.28}
+            size_hint_x: 0.8
+            icon_left: "key-variant"
+            icon_right_color: app.theme_cls.primary_color
+
+        MDRaisedButton:
+            text: "Entrar"
+            font_size: 18
+            elevation: 8
+            pos_hint: {'center_x': 0.5, 'center_y': 0.19}
+            size_hint_x: 0.8
+
+        MDLabel:
+            text: "Entrar com:"
+            font_style: 'Caption'
+            halign: 'center'
+            pos_hint: {'center_x': 0.5, 'center_y': 0.14}
+
+        MDRectangleFlatIconButton:
+            text: "Facebook"
+            icon: "facebook"
+            icon_color: 1, 1, 1, 1
+            font_size: 18
+            elevation: 8
+            text_color: 1, 1, 1, 1
+            md_bg_color: 0.18, 0.53, 1, 1
+            pos_hint: {'center_x': 0.71, 'center_y': 0.09}
+            size_hint_x: 0.38
+
+        MDRectangleFlatIconButton:
+            text: "Google"
+            icon: "google"
+            icon_color: 1, 1, 1, 1
+            font_size: 18
+            elevation: 8
+            text_color: 1, 1, 1, 1
+            md_bg_color: 0.89, 0.25, 0, 1
+            pos_hint: {'center_x': 0.29, 'center_y': 0.09}
+            size_hint_x: 0.38

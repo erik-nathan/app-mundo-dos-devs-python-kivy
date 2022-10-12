@@ -1,0 +1,103 @@
+<LoginScreen>
+    name: 'login'
+
+    FloatLayout:
+        MDCard:
+            md_bg_color: 0.98, 0.96, 1.00
+
+        MDTopAppBar:
+            md_bg_color: 1, 1, 1, 0
+            title: "Login"
+            elevation: 10 # COLOCA UMA LEVE SOMBRA A BAIXO DA BARRA
+            pos_hint: {'top': 1} # POSICIONAMENTO DESSE ELEMENTO NO TOP
+#            on_press: root.manager.current = 'login'
+            left_action_items: [["arrow-left", lambda x: root.callback()]]
+
+        Image:
+            source: 'images/devops-img.png'
+            size_hint: (0.55, 0.55)
+            pos_hint: {'center_x': 0.5, 'center_y': 0.72}
+
+        MDLabel:
+            text: 'BEM-VINDO AO MUNDO DOS DEVS!'
+            bold: True
+            theme_text_color: "Custom"
+            text_color: 0.61, 0.15, 0.69
+            font_style: 'H6'
+            halign: 'center'
+            pos_hint: {'center_x': 0.5, 'center_y': 0.55}
+
+        MDLabel:
+            text: 'Faça o Login para continuar!'
+            font_style: 'Caption'
+            halign: 'center'
+            pos_hint: {'center_x': 0.5, 'center_y': 0.52}
+
+        MDTextField:
+            hint_text: "E-mail: "
+            helper_text: "user@email.com"
+            mode: "rectangle"
+            pos_hint: {'center_x': 0.5, 'center_y': 0.45}
+            size_hint_x: 0.8
+            icon_left: 'email'
+            icon_left_color: app.theme_cls.primary_color
+
+        MDTextField:
+            hint_text: "Senha: "
+            helper_text: "Sua senha"
+            mode: "rectangle"
+            password: True
+            pos_hint: {'center_x': 0.5, 'center_y': 0.36}
+            size_hint_x: 0.8
+            icon_left: "key-variant"
+            icon_right_color: app.theme_cls.primary_color
+
+        MDTextButton:
+            text: "Esqueci minha senha"
+            font_size: 12
+            pos_hint: {'center_x': 0.5, 'center_y': 0.3}
+
+        MDRaisedButton:
+            text: "Entrar"
+            font_size: 18
+            elevation: 8
+            pos_hint: {'center_x': 0.5, 'center_y': 0.25}
+            size_hint_x: 0.8
+
+        MDRectangleFlatIconButton:
+            text: "Facebook"
+            icon: "facebook"
+            icon_color: 1, 1, 1, 1
+            font_size: 18
+            elevation: 8
+            text_color: 1, 1, 1, 1
+            md_bg_color: 0.18, 0.53, 1, 1
+            pos_hint: {'center_x': 0.71, 'center_y': 0.18}
+            size_hint_x: 0.38
+
+        MDRectangleFlatIconButton:
+            text: "Google"
+            icon: "google"
+            icon_color: 1, 1, 1, 1
+            font_size: 18
+            elevation: 8
+            text_color: 1, 1, 1, 1
+            md_bg_color: 0.89, 0.25, 0, 1
+            pos_hint: {'center_x': 0.29, 'center_y': 0.18}
+            size_hint_x: 0.38
+
+        MDRectangleFlatButton:
+            text: "Criar Conta"
+            theme_text_color: "Custom"
+            text_color: "black"
+            font_size: 18
+            elevation: 8
+            pos_hint: {'center_x': 0.5, 'center_y': 0.10}
+            size_hint_x: 0.8
+            on_press: root.manager.current = 'cadastro'
+
+
+
+
+
+
